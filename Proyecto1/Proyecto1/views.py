@@ -5,7 +5,7 @@ from django.template import Template, Context
 
 """
 def saludo(request):
-    doc_externo = open('plantilla1.html') # no es la forma mas elegante de hacerlo en django
+    doc_externo = open('/mnt/4EA83DD1A83DB7F3/python/proyectos_django/Proyecto1/Proyecto1/plantillas/plantilla1.html') # no es la forma mas elegante de hacerlo en django
     plantilla = Template(doc_externo.read())
     doc_externo.close()
     contexto = Context()
