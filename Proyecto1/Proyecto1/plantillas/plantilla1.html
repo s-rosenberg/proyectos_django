@@ -1,7 +1,41 @@
 <html>
     <body>
-        <h1>
+
+        {% include "barra.html" %}
+        <h1 style='color: greenyellow'>
             Hola mondo! probando plantillas con Django
         </h1>
+        <!-- no abusar de la parte logica en plantillas / idealmente tiene que estar todo en el views-->
+        {# otra manera de meter comments #}
+        {% comment %}
+            Otra manera
+            de agregar
+            comentarios
+        {% endcomment %}
+
+        {% if nombre_persona == 'Sebastian' %}
+            <p>Magia para Sebastian</p>
+        {% else %}
+            <p>No hay magia</p>
+        {% endif %}
+       
+        {# Buscar en Django templates filters para entender bien el | #}
+        <p>Mi nombre es: {{nombre_persona|upper|first}} {{apellido_persona}}</p>
+        <p>Hoy es: {{fecha.day}}/{{fecha.month}}/{{fecha.year}} </p>
+        <p style='color: gray'>Hoy voy a comer:</p>
+        <p>
+            <ul>
+                {% if comidas %}
+                    {% for comida in comidas %}
+                        <li>{{comida}}</li>
+                    {% endfor %}
+                
+                    {% else %}
+                        <p>No hay comida :'(</p>
+                {% endif %}
+            </ul>    
+
+
+        </p>
     </body>
 </html>
