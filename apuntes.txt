@@ -1,0 +1,35 @@
+Crear proyecto:
+django-admin startproject 'nombre proyecto'
+Crear aplicacion:
+python manage.py startapp 'nombre app'
+
+Se escribe en models.py las clases son las tablas dentro de la BBDD
+
+Checkear que no hay errores en las clases generadas:
+python manage.py check 'nombre app'
+
+Para crear la BBDD (necesaria para app)
+python manage.py makemigrations -> te va a dar un numero(*) 
+python manage.py sqlmigrate 'nombre app' numero(*) -> genera el codigo SQL
+python manage.py migrate -> lo migra a la BBDD
+
+Instrucciones para agregar registro a BBDD
+variable = Tabla(variable con los campos de tabla)
+variable.save()
+
+Otra opcion
+variable = Tabla.objects.create(campos) 
+
+Para hacer un update
+variable.campo = nuevo valor
+variable.save()
+
+Para hacer un delete
+variable = Tabla.objects.get(campo=criterio) -> aca guardo campo en variable
+variable.delete()
+
+Para hacer un select
+
+Lista = Articulos.objects.all()
+
+ 
