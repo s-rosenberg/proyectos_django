@@ -32,4 +32,19 @@ Para hacer un select
 
 Lista = Articulos.objects.all()
 
+Para hacer un where
+
+Tabla.objects.filter(campo=criterio) -> devuelve un objeto queryset
+Para que se vea bien implemente el metodo __str__ en la clase que estaba haciendo la query
+
+si lo hago desde el shell y quiero ver 
+que valores son mayores: campo__gte=valor
+		menores: campo__lte=valor
+		entre: campo__range(valor, valor)
+
+ORDER BY:
+a la instruccion anterior .order_by('campo')
+ORDER BY DESC:
+a la instruccion anterior .order_by('-campo')
+
  

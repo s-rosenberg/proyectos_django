@@ -79,6 +79,7 @@ DATABASES = {
         #SQLITE3 POR DEFECTO
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': BASE_DIR / 'db.sqlite3',
+        
         # POSTGRESQL
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'articulosclientes',
